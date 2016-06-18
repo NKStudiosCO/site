@@ -1,17 +1,14 @@
 {
-  "name": "Injecta",
-  "version": "0.0.1",
+  "name": "Small",
+  "version": "0.1.0",
   "manifest_version": 2,
-  "description": "Injecting stuff",
-  "homepage_url": "http://danharper.me",
+  "description": "Removes medium recommended articles",
+  "homepage_url": "http://jesusrmoreno.github.io",
   "background": {
     "scripts": [
       "background.js"
     ],
     "persistent": true
-  },
-  "browser_action": {
-    "default_title": "Inject!"
   },
   "permissions": [
     "https://medium.com/*",
