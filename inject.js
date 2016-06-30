@@ -1,16 +1,12 @@
 (function() {
   MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
-  $('article[data-source*=reading_list---------]')
-    .parent()
-    .parent()
-    .parent()
-    .remove();
   var observer = new MutationObserver(function(mutations, observer) {
-    $('article[data-source*=reading_list---------]')
-      .parent()
-      .parent()
-      .parent()
-      .remove();
+    $('.postMetaInline').each(function(i, e) {
+      var isRec = $(e).html().indexOf('Recommended') !== -1;
+      if (isRec) {
+        $(e).parent().parent().parent().parent().hide();
+      }
+    });
   });
   observer.observe(document, {
     subtree: true,
